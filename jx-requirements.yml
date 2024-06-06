@@ -16,6 +16,8 @@ spec:
     provider: minikube
   environments:
   - key: dev
+    owner: Andre-Oliveira-96
+    repository: jxDemo
   - key: staging
   - key: production
   ingress:
@@ -26,6 +28,8 @@ spec:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: Andre-Oliveira-96
   repository: bucketrepo
   secretStorage: local
   vault: {}
