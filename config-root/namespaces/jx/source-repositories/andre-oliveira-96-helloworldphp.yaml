@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: Andre-Oliveira-96
+    provider: github
+    repository: helloworldphp
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: andre-oliveira-96-helloworldphp
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/Andre-Oliveira-96/helloworldphp.git
+  org: Andre-Oliveira-96
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: helloworldphp
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/Andre-Oliveira-96/helloworldphp
