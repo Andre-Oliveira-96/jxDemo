@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        Andre-Oliveira-96/jenkinsCI: true
         Andre-Oliveira-96/jxDemo: true
     plank: {}
     pod_namespace: jx
@@ -19,6 +20,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        Andre-Oliveira-96/jenkinsCI: merge
         Andre-Oliveira-96/jxDemo: merge
       queries:
       - labels:
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - Andre-Oliveira-96/jxDemo
+        - Andre-Oliveira-96/jenkinsCI
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - Andre-Oliveira-96/jxDemo
+        - Andre-Oliveira-96/jenkinsCI
       target_url: http://lighthouse-jx.192.168.59.101.nip.io/merge/status
 kind: ConfigMap
 metadata:

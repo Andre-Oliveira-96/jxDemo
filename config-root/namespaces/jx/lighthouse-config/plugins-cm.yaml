@@ -6,6 +6,10 @@ data:
       repos:
       - Andre-Oliveira-96/jxDemo
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - Andre-Oliveira-96/jenkinsCI
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -16,6 +20,11 @@ data:
         env/prow/plugins.yaml:
           name: plugins
     external_plugins:
+      Andre-Oliveira-96/jenkinsCI:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       Andre-Oliveira-96/jxDemo:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -25,6 +34,20 @@ data:
       additional_labels: null
     owners: {}
     plugins:
+      Andre-Oliveira-96/jenkinsCI:
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
       Andre-Oliveira-96/jxDemo:
       - config-updater
       - approve
@@ -52,6 +75,11 @@ data:
     - repos:
       - Andre-Oliveira-96/jxDemo
       trusted_org: Andre-Oliveira-96
+    - repos:
+      - Andre-Oliveira-96/jenkinsCI
+      trusted_org: Andre-Oliveira-96
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
